@@ -1,12 +1,12 @@
 """virtual_piano_full.py
 ────────────────────────────────────────────────────────────────
-Virtual Piano PRO — Mediapipe × CustomTkinter
-(Hand-Only Detection + Polyphonic Audio)
+Virtual Piano — Mediapipe × CustomTkinter
+
 ────────────────────────────────────────────────────────────────
 • 即時鏡頭畫面 + 霧白琴鍵 GUI 同窗呈現。
 • 手指尖低於手腕 ⇒ 琴鍵 (C‧D‧E‧F‧G) 亮藍並發出多音音符。
 • 僅使用 Mediapipe Hands 模組，移除臉部偵測。
-依賴：
+仄個可以安裝環境 懶得用requirements：
     pip install customtkinter mediapipe opencv-python numpy pillow simpleaudio
 ────────────────────────────────────────────────────────────────
 """
@@ -78,7 +78,7 @@ class PianoApp(ctk.CTk):
 
     def _build_ui(self) -> None:
         # 標題文字
-        ctk.CTkLabel(self, text="Virtual Piano PRO", font=("SF Pro", 28, "bold")).pack(pady=(10, 0))
+        ctk.CTkLabel(self, text="Virtual Piano", font=("SF Pro", 28, "bold")).pack(pady=(10, 0))
 
         # 主體分區
         body = ctk.CTkFrame(self, fg_color="transparent")
@@ -185,3 +185,4 @@ if __name__ == "__main__":
         PianoApp().mainloop()
     except KeyboardInterrupt:
         sys.exit(0)
+
